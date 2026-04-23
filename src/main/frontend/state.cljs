@@ -387,7 +387,7 @@
                       [?p :block/journal-day ?d]
                       [(>= ?d ?start)]
                       [(<= ?d ?today)]]
-             :inputs [:14d :today]
+             :inputs [:30d :today]
              :result-transform '(fn [result]
                                   (sort-by (fn [h]
                                              (get h :block/priority "Z")) result))
@@ -422,7 +422,7 @@
                       [?p :block/journal-day ?d]
                       [(>= ?d ?start)]
                       [(<= ?d ?today)]]
-             :inputs [:14d :today]
+             :inputs [:30d :today]
              :collapsed? true}
             {:title [:span (shui/tabler-icon "Todo" {:class "align-middle pr-1"}) [:span.align-middle "TODO"]]
              :query '[:find (pull ?b [*])
